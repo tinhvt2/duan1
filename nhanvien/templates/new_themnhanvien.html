@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+
+    <link rel="stylesheet" href=" {% static '/nv_reset.css' %} ">
+    <link rel="stylesheet" href=" {% static '/nv2_app.css' %} ">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css">
+
+    <title>thêm nhân viên</title>
+</head>
+
+<body id="bg" style="background-image : url('{% static 'img/nv1_bg.jpg' %}');">
+
+    <div id="wrapper">
+        <form action="{%url 'xuly_themnhanvien' %}" id="form-login">
+            <h1 class="form-heading">Form thêm nhân viên</h1>
+
+            <div class="form-group">
+                <!-- <i class="far fa-user"></i> -->
+                <input type="text" id="tennv" name="tennv" class="form-input" placeholder="Tên nhân viên">
+            </div>
+
+            <div class="form-group">
+                <!-- <i class="far fa-user"></i> -->
+                <input type="text" id="chucvunv" name="chucvunv" class="form-input" placeholder="Chức vụ">
+            </div>
+
+            <div class="form-group">
+                <!-- <i class="far fa-user"></i> -->
+                <input type="number" id="namsinhnv" name="namsinhnv" class="form-input" placeholder="Năm sinh">
+            </div>
+            <input type="submit" value="thêm" class="form-submit">
+        </form>
+        
+    </div>
+
+
+    <div id="form-exit">
+        <form action="{%url 'xuly_thoat' %}">
+            <input type="submit" value="thoát" class="exit">
+        </form>
+    </div>
+    
+</body>
+<!-- <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+<script src="/Form_Dangnhap/js/app.js"></script> -->
+</html>
